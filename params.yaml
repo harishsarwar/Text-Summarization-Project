@@ -1,4 +1,15 @@
-# 4. when we execute this steps in experiment.ipynb of readme.md i mentioned to read_yaml file but it is empty 
-# Now we need to  create a dummy file yaml file which is responsible for clear excecution of project
+# model parameters which give better performance Nothing but known as hyper parameters tuning.
+# this is used during the model training phase
 
-key: value
+# For better understanding of we can this parameters in "research\Text-Summarization.ipynb"
+
+TrainingArguments:
+  num_train_epochs: 1
+  warmup_steps: 500
+  per_device_train_batch_size: 1
+  weight_decay: 0.01
+  logging_steps: 10
+  evaluation_strategy: steps
+  eval_steps: 500
+  save_steps: 1e6
+  gradient_accumulation_steps: 16
